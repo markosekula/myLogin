@@ -1,0 +1,47 @@
+<div class="row">
+    <div class="col-md-12">
+
+        <h2> <span class="glyphicon glyphicon-log-in"></span>    Log In Page </h2>
+
+    </div>
+</div>
+
+<div class="row">
+
+
+    <div class="col-md-2">
+        <div class="login-page" id="page">
+            <form role="form" name="form1">
+                <div class="form-group">
+                    <p>Welcome: {{user.email}}</p>
+                    <label for="exampleemail">Email: </label>
+                    <input type="text" placeholder="Enter email" class="form-control" ng-model="user.email" required> </input>
+                </div>
+
+                <div class="form-group">
+                    <label for="examplepasword">Password: </label>
+                    <input type="password" placeholder="Enter password" id="examplepassword" class="form-control" ng-model="user.password" required> </input>
+                </div>
+
+        </div>
+        <div>
+            <button class="btn btn-default" type="submit" ng-disabled="form1.$invalid" ng-click="vm.login(user)">Submit</button>
+        </div>
+        <br>
+    </div>
+
+    <div class="col-md-10">
+        <div class="keyboard">
+            <button class="btn btn-primary" type="submit" ng-click="vm.openKeyboard()"> Keyboard </button>
+            <br>
+            <br>
+            <button class="btn btn-primary" type="submit" ng-click=""> Processor </button>
+        </div>
+    </div>
+</div>
+<br>
+<p> {{vm.message}} </p>
+
+</form>
+</div>
+</div>
